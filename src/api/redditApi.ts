@@ -8,7 +8,7 @@ export const getApi = async (after?: string): Promise<any> => {
 
 export const getPosts = async (after?: string) => {
     const apiData = await getApi(after);
-    return {posts: apiData["data"]["children"], after: apiData["after"]}
+    return {posts: apiData["data"]["children"], after: apiData["data"]["after"]}
 }
 
 export const convertToPost = (data: any) => {
